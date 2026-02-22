@@ -1,11 +1,114 @@
-import React from 'react';
+import './App.css'
 
-const App = () => {
+function App() {
   return (
-    <div>
-      hello
+    <div className="container">
+      <div className="content">
+        {/* ASCII Art Banner */}
+        <div className="ascii-banner">
+          <pre>
+{`    ██████╗  ██████╗  ██████╗ ████████╗███████╗████████╗██████╗  ██████╗ ██████╗ 
+    ██╔══██╗██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗
+    ██████╔╝██║   ██║██║   ██║   ██║   ███████╗   ██║   ██████╔╝███████║██████╔╝
+    ██╔══██╗██║   ██║██║   ██║   ██║   ╚════██║   ██║   ██╔══██╗██╔══██║██╔═══╝ 
+    ██████╔╝╚██████╔╝╚██████╔╝   ██║   ███████║   ██║   ██║  ██║██║  ██║██║     
+    ╚═════╝  ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝`}
+          </pre>
+        </div>
+
+        <div className="layout">
+          <div className="left-column">
+            <h1 className="title">React + Vite</h1>
+            
+            <p className="description">
+              Your development environment is ready. 
+              Start building by editing <code>src/App.jsx</code>
+            </p>
+
+            <div className="section">
+              <div className="section-header">
+                <h2>Technology Stack</h2>
+              </div>
+              <div className="stack-list">
+                <div className="stack-item">
+                  <span>React</span>
+                  <span className="version">^18.3.1</span>
+                </div>
+                <div className="stack-item">
+                  <span>Vite</span>
+                  <span className="version">^5.4.11</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="section">
+              <div className="section-header secondary">
+                <h2>Available Commands</h2>
+              </div>
+              <div className="commands">
+                <div className="command-item">
+                  <div className="terminal">$ npm run dev</div>
+                  <p className="command-desc">Start development server</p>
+                </div>
+                <div className="command-item">
+                  <div className="terminal">$ npm run build</div>
+                  <p className="command-desc">Build for production</p>
+                </div>
+                <div className="command-item">
+                  <div className="terminal">$ npm run preview</div>
+                  <p className="command-desc">Preview production build</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="right-column">
+            <div className="info-box">
+              <h3>Quick Start</h3>
+              <ol className="steps">
+                <li>
+                  <span className="step-number">1.</span>
+                  <span>Open <code>src/App.jsx</code> in your editor</span>
+                </li>
+                <li>
+                  <span className="step-number">2.</span>
+                  <span>Modify the component and save</span>
+                </li>
+                <li>
+                  <span className="step-number">3.</span>
+                  <span>See changes instantly with Hot Module Replacement</span>
+                </li>
+              </ol>
+            </div>
+
+            <div className="info-box">
+              <h3>Project Structure</h3>
+              <div className="file-tree">
+                <div>src/</div>
+                <div className="indent">├── App.jsx</div>
+                <div className="indent">├── App.css</div>
+                <div className="indent">├── Main.jsx</div>
+                <div className="tree-gap">public/</div>
+                <div className="indent">└── vite.svg</div>
+              </div>
+            </div>
+
+            <div className="info-box docs">
+              <h3>Documentation</h3>
+              <ul className="links">
+                <li><a href="https://react.dev" target="_blank" rel="noopener noreferrer">React Docs</a></li>
+                <li><a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">Vite Docs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <footer className="footer">
+          <p>Generated by Bootstrap CLI</p>
+        </footer>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

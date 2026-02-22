@@ -6,12 +6,14 @@ import path from "path";
 import { runCommand } from "../utils/runCommand";
 import { createGitIgnore } from "../utils/gitIgnore";
 import TemplatesConfig from "../templatesConfig";
+import { printTextArt } from "../utils/textArt";
+import { generateProject } from "../generators/generateProject";
 
 export async function createCommand(
   projectName: string,
   options: { install: boolean; git: boolean; force: boolean },
 ) {
-  console.log(chalk.blue.bold("\nProject Bootstrapper\n"));
+  printTextArt();
 
   const isCurrentDir = projectName === ".";
 
@@ -91,7 +93,8 @@ export async function createCommand(
       throw new Error("Invalid project type selected");
     }
 
-    await template.generator(targetPath, resolvedProjectName);
+    // await template.generator(targetPath, resolvedProjectName);
+    await generateProject(targetPath, resolvedProjectName, template.value);
 
     createSpinner.succeed("Project created successfully");
   } catch (error) {

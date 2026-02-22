@@ -1,13 +1,14 @@
 import fs from "fs-extra";
 import path from "path";
 
-export async function generateExpressMongoDbJSProject(
+export async function generateProject(
   targetPath: string,
-  projectName: string
+  projectName: string,
+  templateFolder: string
 ) {
   const templatePath = path.resolve(
     __dirname,
-    "../../templates/express+mongodb-js"
+    `../../templates/${templateFolder}`
   );
 
   await fs.copy(templatePath, targetPath);

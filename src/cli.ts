@@ -2,12 +2,13 @@
 
 import { Command } from "commander";
 import { createCommand } from "./commands/create";
+import { printTextArt } from "./utils/textArt";
 
 const program = new Command();
 
 program
   .name("bootstrap")
-  .description("Project Bootstrapper CLI")
+  .description("CLI tool to bootstrap new projects with ease")
   .version("1.0.0");
 
 program
