@@ -2,7 +2,6 @@
 
 import { Command } from "commander";
 import { createCommand } from "./commands/create";
-import { printTextArt } from "./utils/textArt";
 
 const program = new Command();
 

@@ -20,11 +20,11 @@ function App() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              React + Vite + Tailwind
+              React + Vite + Tailwind + shadcn/ui
             </h1>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Your development environment is ready. 
+              Your development environment is ready with shadcn/ui pre-configured. 
               Start building by editing <code className="bg-gray-100 px-2 py-1 font-mono text-sm">src/App.jsx</code>
             </p>
 
@@ -43,6 +43,10 @@ function App() {
                   <div className="flex justify-between">
                     <span>Tailwind CSS</span>
                     <span className="text-gray-400 font-mono text-sm">^4.2.0</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>shadcn/ui</span>
+                    <span className="text-gray-400 font-mono text-sm">^3.8.5</span>
                   </div>
                 </div>
               </div>
@@ -64,9 +68,9 @@ function App() {
                   </div>
                   <div>
                     <div className="bg-gray-900 text-green-400 p-3 font-mono text-sm mb-1">
-                      $ npm run preview
+                      $ npx shadcn@latest add button
                     </div>
-                    <p className="text-sm text-gray-500">Preview production build</p>
+                    <p className="text-sm text-gray-500">Add shadcn/ui components</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +87,7 @@ function App() {
                 </li>
                 <li className="flex">
                   <span className="font-bold mr-3">2.</span>
-                  <span>Modify the component and save</span>
+                  <span>Add shadcn/ui components using the CLI</span>
                 </li>
                 <li className="flex">
                   <span className="font-bold mr-3">3.</span>
@@ -96,12 +100,15 @@ function App() {
               <h3 className="text-xl font-bold mb-4">Project Structure</h3>
               <div className="font-mono text-sm text-gray-700 space-y-1">
                 <div>index.html</div>
+                <div>jsconfig.json</div>
                 <div>src/</div>
                 <div className="pl-4">├── App.jsx</div>
                 <div className="pl-4">├── App.css</div>
                 <div className="pl-4">├── main.jsx</div>
-                <div className="mt-3">public/</div>
-                <div className="pl-4">└── vite.svg</div>
+                <div className="pl-4">├── lib/</div>
+                <div className="pl-8">└── utils.js</div>
+                <div className="mt-3">components/</div>
+                <div className="pl-4">└── ui/</div>
               </div>
             </div>
 
@@ -111,6 +118,7 @@ function App() {
                 <li><a href="https://react.dev" target="_blank">React Docs</a></li>
                 <li><a href="https://vitejs.dev" target="_blank">Vite Docs</a></li>
                 <li><a href="https://tailwindcss.com" target="_blank">Tailwind Docs</a></li>
+                <li><a href="https://ui.shadcn.com" target="_blank">shadcn/ui Docs</a></li>
               </ul>
             </div>
           </div>

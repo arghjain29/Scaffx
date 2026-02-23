@@ -15,6 +15,11 @@ const TemplatesConfig: Record<string, TemplateConfig> = {
     name: "React + Tailwind CSS (JavaScript)",
     nextSteps: [{ command: "npm install" }, { command: "npm run dev" }],
   },
+  "react+tailwind+shadcn-js": {
+    value: "react+tailwind+shadcn-js",
+    name: "React + Tailwind CSS + shadcn/ui (JavaScript)",
+    nextSteps: [{ command: "npm install" }, { command: "npx shadcn@latest init" }, { command: "npm run dev" }],
+  },
   "node-js": {
     value: "node-js",
     name: "Node Server (JavaScript)",

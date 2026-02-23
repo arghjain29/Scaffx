@@ -32,11 +32,11 @@ function App() {
               <div className="stack-list">
                 <div className="stack-item">
                   <span>React</span>
-                  <span className="version">^18.3.1</span>
+                  <span className="version">^19.2.0</span>
                 </div>
                 <div className="stack-item">
                   <span>Vite</span>
-                  <span className="version">^5.4.11</span>
+                  <span className="version">^7.3.1</span>
                 </div>
               </div>
             </div>
