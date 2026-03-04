@@ -2,6 +2,7 @@
 
 import { Command } from "commander";
 import { createCommand } from "./commands/create";
+import { addCommand } from "./commands/add";
 
 const program = new Command();
 
@@ -18,6 +19,13 @@ program
   .option("--force", "Overwrite existing directory")
   .action((projectName: string, options: { install: boolean; git: boolean; force: boolean }) => {
     createCommand(projectName, options);
+  });
+
+program
+  .command("add <feature>")
+  .description("Add a new feature to the project")
+  .action((feature: string) => {
+    addCommand(feature);
   });
 
 program.parse(process.argv);

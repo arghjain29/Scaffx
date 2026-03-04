@@ -1,9 +1,9 @@
-1️⃣ bootstrap add ⭐ (Best Next Command)
+1. bootstrap add ⭐ (Best Next Command)
 Purpose
 
 Add features to an existing project.
 
-3️⃣ bootstrap list
+2. bootstrap list
 Purpose
 
 List available templates.

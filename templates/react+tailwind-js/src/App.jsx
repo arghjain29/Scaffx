@@ -1,4 +1,3 @@
-import './App.css'
 
 function App() {
 
@@ -98,7 +97,7 @@ function App() {
                 <div>index.html</div>
                 <div>src/</div>
                 <div className="pl-4">├── App.jsx</div>
-                <div className="pl-4">├── App.css</div>
+                <div className="pl-4">├── index.css</div>
                 <div className="pl-4">├── main.jsx</div>
                 <div className="mt-3">public/</div>
                 <div className="pl-4">└── vite.svg</div>

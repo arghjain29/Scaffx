@@ -1,4 +1,3 @@
-import './App.css'
 
 function App() {
 
@@ -103,7 +102,7 @@ function App() {
                 <div>jsconfig.json</div>
                 <div>src/</div>
                 <div className="pl-4">├── App.jsx</div>
-                <div className="pl-4">├── App.css</div>
+                <div className="pl-4">├── index.css</div>
                 <div className="pl-4">├── main.jsx</div>
                 <div className="pl-4">├── lib/</div>
                 <div className="pl-8">└── utils.js</div>

@@ -1,4 +1,3 @@
-import './App.css'
 
 function App() {
   return (
@@ -86,7 +85,7 @@ function App() {
               <div className="file-tree">
                 <div>src/</div>
                 <div className="indent">├── App.jsx</div>
-                <div className="indent">├── App.css</div>
+                <div className="indent">├── index.css</div>
                 <div className="indent">├── Main.jsx</div>
                 <div className="tree-gap">public/</div>
                 <div className="indent">└── vite.svg</div>
