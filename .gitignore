@@ -3,5 +3,7 @@ dist/
 build/
 .env
 
+.github/
+
 myapp/
 testapp/

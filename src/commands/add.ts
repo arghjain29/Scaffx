@@ -1,11 +1,11 @@
 import chalk from "chalk";
 import fs from "fs-extra";
 import path from "path";
-import { addTailwind } from "../generators/addFeature";
+import inquirer from "inquirer";
+import FeaturesConfig from "../config/featureConfig";
 
-export async function addCommand(feature: string) {
+export async function addCommand(feature?: string) {
   const projectPath = process.cwd();
-
   const pkgPath = path.join(projectPath, "package.json");
 
   if (!(await fs.pathExists(pkgPath))) {
@@ -13,12 +13,32 @@ export async function addCommand(feature: string) {
     return;
   }
 
-  switch (feature) {
-    case "tailwind":
-      await addTailwind(projectPath);
-      break;
+  if (!feature) {
+    const answer = await inquirer.prompt([
+      {
+        type: "list",
+        name: "feature",
+        message: "Select a feature to add",
+        choices: Object.values(FeaturesConfig).map((f) => ({
+          name: f.name,
+          value: f.value,
+        })),
+      },
+    ]);
 
-    default:
-      console.error(chalk.red(`Unknown feature: ${feature}`));
+    feature = answer.feature;
   }
+
+  if (!feature) {
+    console.error(chalk.red("No feature specified."));
+    return;
+  }
+  const selectedFeature = FeaturesConfig[feature];
+
+  if (!selectedFeature) {
+    console.error(chalk.red(`Unknown feature: ${feature}`));
+    return;
+  }
+
+  await selectedFeature.handler(projectPath);
 }

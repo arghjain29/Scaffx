@@ -22,9 +22,9 @@ program
   });
 
 program
-  .command("add <feature>")
+  .command("add [feature]")
   .description("Add a new feature to the project")
-  .action((feature: string) => {
+  .action((feature?: string) => {
     addCommand(feature);
   });
 

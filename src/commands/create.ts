@@ -5,7 +5,7 @@ import fs from "fs-extra";
 import path from "path";
 import { runCommand } from "../utils/runCommand";
 import { createGitIgnore } from "../utils/gitIgnore";
-import TemplatesConfig from "../templatesConfig";
+import TemplatesConfig from "../config/templatesConfig";
 import { printTextArt } from "../utils/textArt";
 import { generateProject } from "../generators/generateProject";
 
