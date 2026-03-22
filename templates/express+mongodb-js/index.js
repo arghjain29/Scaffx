@@ -1,13 +1,14 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from "express";
 import cors from 'cors';
-import dotenv from 'dotenv';
 import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 import connectDB from "./config/db.js";
 
 
 const app = express();
-dotenv.config();
+
 
 // Logger
 app.use(morgan('dev'));
@@ -47,6 +48,9 @@ connectDB();
 // Error handler
 app.use((err, req, res, next) => {
   console.error(err);
+  res
+    .status(err.status || 500)
+    .json({ error: err.message || "Internal Server Error" });
 });
 
 

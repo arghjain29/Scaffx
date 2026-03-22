@@ -1,9 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from "express";
 import cors from 'cors';
-import dotenv from 'dotenv';
 import morgan from 'morgan';
 const app = express();
-dotenv.config();
+
 
 
 // Cors Middleware
