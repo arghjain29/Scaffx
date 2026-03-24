@@ -1,9 +1,9 @@
 {
-  "name": "project-bootstrapper-cli",
+  "name": "scaffx",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CLI tool to scaffold new projects with predefined templates.",
   "bin": {
-    "bootstrap": "./dist/cli.js"
+    "scaffx": "./dist/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
   },
   "files": ["dist", "templates"],
   "keywords": [],
-  "author": "",
+  "author": "Argh Jain",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

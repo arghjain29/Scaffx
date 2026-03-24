@@ -7,8 +7,8 @@ import { addCommand } from "./commands/add";
 const program = new Command();
 
 program
-  .name("bootstrap")
-  .description("CLI tool to bootstrap new projects with ease")
+  .name("scaffx")
+  .description("CLI tool to scaffold new projects with ease")
   .version("1.0.0");
 
 program
