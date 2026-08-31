@@ -40,7 +40,7 @@ Run inside an existing project directory:
 scaffx add
 ```
 
-Or specify the feature directly:
+Or can specify the feature directly:
 
 ```bash
 scaffx add tailwind
